@@ -11,11 +11,11 @@ const port = process.env.SERVER_PORT
 
 const app = express()
 
-app.use(express.static(path.join(__dirname, '/public')))
+app.use(express.static(path.join(__dirname, 'public')))
 
 // define a route handler for the default home page
 app.get('/', (req, res) => {
-  res.sendFile(path.join(__dirname, '/public/index.html'))
+  res.sendFile(path.join(__dirname, 'public', 'index.html'))
 })
 
 // start the Express server
